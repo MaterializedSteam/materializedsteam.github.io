@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gift Redemption</title>
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper  blue-grey darken-1">
+        <a href="index.html" class="brand-logo">Steam Materializer [Beta]</a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="create_code.html">Create a QR Code</a></li>
+          <li><a href="index.html">Redeem QR Code</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://github.com/MaterializedSteam/materializedsteam.github.io">Github</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Gift Received Modal -->
+      <div id="success_modal" class="modal">
+        <h4>Here's your gift! <i class="fa fa-gift"></i></h4>
+          <p>
+            <div id="giftImg"></div>
+            Please click the button below to redeem your gift.<br>
+            Remember to make sure you're logged into the right steam account!
+            <span id="giftURL"></span>
+          </p>
+            
+          <div class="action-bar">
+                <p style="display:inline;">
+                  <input type="checkbox" id="verifiedAcc" >
+                  <label for="verifiedAcc" id="verifyLabel">I have verified I am logged into the correct Steam Account.</label>
+                </p>
+            <a id="redeemBtn" href="#" class="waves-effect waves-green btn-flat modal-action" style="vertical-align:middle;">Redeem</a>
+          </div>
+      </div>
+    <!-- End Modal -->
+
+    <div class="container">
+
+       <!-- Error Card -->
+      <div class="row" id="cam_denied" style="display:none;">
+        <div class="col s4 center-align" style="margin-left: 33%;">
+          <div class="card small">
+            <div class="card-image">
+              <img src="img/cam_denied.png">
+            </div>
+            <div class="card-content">
+              <p>Whoops! It looks like you denied permission to the camera! Look in the Address bar and click the camera icon to start fixing the problem.</p>
+            </div>
+            <div class="card-action">
+              <a id="clear_cam_denied" href="#">Fixed it!</a>
+              <a  href="#" onclick='location.reload(true); return false;'><i class="mdi-navigation-refresh"></i> Refresh</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Error Card -->
+
+      <div class="main_info center-align">
+        <h1>Scan QR Code:</h1>
+          <div id='instructions'>
+            Please allow the Redeemer access to your camera.<br />
+            If you did allow access and still see nothing, try refreshing the page.
+          </div>
+
+          <!-- Some stupid inline styles I could get rid of in the next commit -->
+         <div class="qrreader" id="reader" style="width:300px;height:250px;margin: 0 auto;">
+          <div id="qroverlay" style="
+                        height: 100%;
+                        width: 100%;
+                        display: none;
+                        background-color: rgba(100,100,100,0.77);
+          "> 
+            <div class="z-depth-1" id="overlaycontent" style="
+              width: 50%;
+              height: 50%;
+              margin: auto;
+              padding: 5%;
+              top: 3em;
+              vertical-align: middle;
+              position: relative;
+              background-color: white;">
+            <div class="" id="errorMessage">
+              :(
+          </div>
+              </div>
+            </div>
+          </div>
+      </div> 
+      <!-- main -->
+      <h3>
+        Instructions
+      </h3>
+      <ol>
+        <li><b>IMPORTANT</b> Ensure you are logged into the Steam account you wish to redeem this gift on. <br />
+          You can check what account you're logged into <a href="https://store.steampowered.com/account/">here</a></li>
+        <li>Allow Steam Redeemer Access to your webcam</li>
+        <li>Hold up the QR Code you've been given to the webcam</li>
+      </ol>
+      NOTE: Remember this is beta software. If this doesn't work just ask your friend to forward you the email.
+
+      
+    </div> <!-- /container -->
+
+        <!-- Footer -->
+     <footer class="page-footer blue-grey darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">NOTICE</h5>
+                <p class="grey-text text-lighten-4">Another reminder this is beta software and is still under testing. Use at your own risk. James Firth is not responsible for any losses caused by the use of this site.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="http://store.steampowered.com/">Steam</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://blog.james-firth.com">Oscillating Interest (Blog)</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://james-firth.com">James Firth's Website</a></li>
+                <ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            Copyright © 2015 James Firth. "Steam", "Valve", and the Steam logo are all property of Valve. No infringement intended
+            </div>
+          </div>
+        </footer>
+        <!-- End Footer -->
+
+
+
+    <script src="lib/html5-qrcode.min.js"></script>
+    <script src="js/redeemer.js"></script>
+  </body>
+</html>
