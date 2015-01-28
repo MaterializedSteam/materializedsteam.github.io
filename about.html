@@ -22,6 +22,7 @@
   <body>
     <nav>
       <div class="nav-wrapper  blue-grey darken-1">
+                <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-small-and-up"><i class="mdi-navigation-menu"></i></a>
         <a href="index.html" class="brand-logo">Steam Materializer [ALPHA]</a>
         <ul id="nav-mobile" class="right side-nav">
           <li><a href="create_code.html">Create a QR Code</a></li>
@@ -88,5 +89,9 @@
           </div>
         </footer>
         <!-- End Footer -->
+
+        <script type="text/javascript">
+        $('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70});
+        </script>
   </body>
 </html>

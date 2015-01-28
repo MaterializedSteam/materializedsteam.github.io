@@ -4,7 +4,8 @@
         return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
                   navigator.mozGetUserMedia || navigator.msGetUserMedia);
       }
-
+      
+      $('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70});
 
       $('.modal-trigger').leanModal({
         dismissable: false

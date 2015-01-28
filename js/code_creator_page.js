@@ -1,4 +1,6 @@
 $(function() {
+
+      $('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70});
         
       $( "#gameLookup" ).autocomplete({
         source: autocompleteNames,
