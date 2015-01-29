@@ -5,6 +5,8 @@ A web app to allow people to give physical gift cards for Steam games by creatin
 
 Please submit any feedback as a Github issue.
 
+Testing has been performed on Chrome. Other browsers may or may not work.
+
 #License
 ```
 The MIT License (MIT)
