@@ -1,126 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Steam Gift Materializer</title>
 
-    <title>Gift Redemption</title>
-
-    <!-- CSS -->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
-    <!-- JS -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-  </head>
-
-  <body>
-    <nav>
-      <div class="nav-wrapper  blue-grey darken-1">
-        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-small-and-up"><i class="mdi-navigation-menu"></i></a>
-        <a href="index.html" class="brand-logo">Steam Materializer [ALPHA]</a>
-        <ul id="nav-mobile" class="right side-nav">
-          <li><a href="create_code.html">Create a QR Code</a></li>
-          <li><a href="index.html">Redeem QR Code</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://github.com/MaterializedSteam/materializedsteam.github.io">Github</a></li>
-        </ul>
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="white" role="navigation">
+      <div class="container">
+        <div class="nav-wrapper"><a id="logo-container" href="index.html" class="brand-logo">Steam Gift Materializer</a>
+          <ul id="nav-mobile" class="right side-nav">
+            <li><a href="create.html">Create Gift</a></li>
+            <li><a href="redeem.html">Redeem Gift</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://github.com/MaterializedSteam/materializedsteam.github.io">Github</a></li>
+          </ul><a href="#" data-activates="nav-mobile" class="button-collapse green-text"><i class="mdi-navigation-menu"></i></a>
+        </div>
       </div>
     </nav>
 
-    <!-- Gift Received Modal -->
-      <div id="success_modal" class="modal">
-        <h4>Here's your gift! <i class="fa fa-gift"></i></h4>
-          <p>
-            <div id="giftImg"></div>
-            Please click the button below to redeem your gift.<br>
-            Remember to make sure you're logged into the right steam account!
-            <span id="giftURL"></span>
-          </p>
-            
-          <div class="action-bar">
-                <p style="display:inline;">
-                  <input type="checkbox" id="verifiedAcc" >
-                  <label for="verifiedAcc" id="verifyLabel">I have verified I am logged into the correct Steam Account.</label>
-                </p>
-            <a id="redeemBtn" href="#" class="waves-effect waves-green btn-flat modal-action" style="vertical-align:middle;">Redeem</a>
-          </div>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center green-text text-lighten-2">Steam Gift Materializer</h1>
+        <div class="row center">
+          <h5 class="header col s12 light black-text">An easy way to give Steam gifts in person</h5>
+        </div>
+        <div class="row center">
+          <a href="create.html" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Give a Gift</a>
+          <a href="redeem.html" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Redeem a Gift</a>
+        </div>
+        <br><br>
+
       </div>
-    <!-- End Modal -->
+    </div>
+    <div class="parallax"><img src="img/background1.jpg" alt="Unsplashed background img 2"></div>
+  </div>
 
-    <div class="container">
 
-       <!-- Error Card -->
-      <div class="row" id="cam_denied" style="display:none;">
-        <div class="col s4 center-align" style="margin-left: 33%;">
-          <div class="card small">
-            <div class="card-image">
-              <img src="img/cam_denied.png">
-            </div>
-            <div class="card-content">
-              <p>Whoops! It looks like you denied permission to the camera! Look in the Address bar and click the camera icon to start fixing the problem.</p>
-            </div>
-            <div class="card-action">
-              <a id="clear_cam_denied" href="#">Fixed it!</a>
-              <a  href="#" onclick='location.reload(true); return false;'><i class="mdi-navigation-refresh"></i> Refresh</a>
-            </div>
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-green-text"><i class="fa fa-gift"></i></h2>
+            <h5 class="center">Quick Gift Creation</h5>
+
+            <p class="light">We made it easy to create a nice looking gift card. Just purchase your gift on Steam then head over to the <a href='create.html'>Create Gift</a> page.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-green-text"><i class="fa fa-smile-o"></i></h2>
+            <h5 class="center">See a Smile in Person</h5>
+
+            <p class="light">We want to give our gifts in person and see the reaction our presents create. It's much more fun to give a gift than send an email.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-green-text"><i class="fa fa-gamepad"></i></h2>
+            <h5 class="center">Go Quickly from Gift to Game</h5>
+
+            <p class="light">Get a gift? Just hold it up to your webcam on the redemption page. No camera? That's okay, you'll just need to do a little bit of typing then.</p>
           </div>
         </div>
       </div>
-      <!-- Error Card -->
 
-      <div class="main_info center-align">
-        <h1>Scan QR Code:</h1>
-          <div id='instructions'>
-            Please allow the Redeemer access to your camera.<br />
-            If you did allow access and still see nothing, try refreshing the page.
-          </div>
+    </div>
+  </div>
 
-          <!-- Some stupid inline styles I could get rid of in the next commit -->
-         <div class="qrreader" id="reader" style="width:300px;height:250px;margin: 0 auto;">
-          <div id="qroverlay" style="
-                        height: 100%;
-                        width: 100%;
-                        display: none;
-                        background-color: rgba(100,100,100,0.77);
-          "> 
-            <div class="z-depth-1" id="overlaycontent" style="
-              width: 50%;
-              height: 50%;
-              margin: auto;
-              padding: 5%;
-              top: 3em;
-              vertical-align: middle;
-              position: relative;
-              background-color: white;">
-            <div class="" id="errorMessage">
-              :(
-          </div>
-              </div>
-            </div>
-          </div>
-      </div> 
-      <!-- main -->
-      <h3>
-        Instructions
-      </h3>
-      <ol>
-        <li><b>IMPORTANT</b> Ensure you are logged into the Steam account you wish to redeem this gift on. <br />
-          You can check what account you're logged into <a href="https://store.steampowered.com/account/">here</a></li>
-        <li>Allow Steam Redeemer Access to your webcam</li>
-        <li>Hold up the QR Code you've been given to the webcam</li>
-      </ol>
-      NOTE: Remember this is ALPHA software. If this doesn't work just ask your friend to forward you the email.
 
-      
-    </div> <!-- /container -->
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A fun way to turn a digital Steam gift into a physical card</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="fa fa-question green-text"></i></h3>
+          <h4>How does it work?</h4>
+          <p class="left-align light">When you purchase a Steam gift, you have the option to email the recipient. Instead of emailing them, you email yourself. We then take that url, strip out the important information and create a QR Code with that information. That QR Code is turned into a printable web page to make it easy for you to give it to your giftee. When they come back with their gift card and scan it, the information stored on the QR Code is read and we simply forward them to the link Steam gave you in that original email. This means that we don't ever open the link and never are in charge of the gift. If something goes wrong you can simply have the giftee use the original link in the email. We put several warnings to make sure the gift is redeemed to the appropriate account, however this is beta software and mistakes happen so we cannot guarantee the safety of the gift.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light black-text">Let's Materialize those Steam Gifts</h5>
+        </div>
+        <div class="row center">
+          <a href="create.html" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Give a Gift</a>
+          <a href="redeem.html" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Redeem a Gift</a>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed background img 3"></div>
+  </div>
 
         <!-- Footer -->
-     <footer class="page-footer blue-grey darken-3">
+     <footer class="page-footer green darken-4">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -146,8 +149,10 @@
         <!-- End Footer -->
 
 
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/front_page.js"></script>
 
-    <script src="lib/html5-qrcode.min.js"></script>
-    <script src="js/redeemer.js"></script>
   </body>
 </html>

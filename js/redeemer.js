@@ -1,4 +1,5 @@
    $(document).ready(function(){
+      $('.parallax').parallax();
 
       function hasGetUserMedia() {
         return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
