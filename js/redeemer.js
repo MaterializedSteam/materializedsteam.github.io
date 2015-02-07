@@ -36,7 +36,7 @@
             $('#redeemBtn').click(function(){
               if($("#verifiedAcc").is(':checked'))
               {
-                // window.location.href = steamurl;
+                window.location.href = steamurl;
               }
               else
               {
